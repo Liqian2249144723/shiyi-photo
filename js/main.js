@@ -166,7 +166,7 @@
   $$(".dl-trigger").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
-      showToast(btn.dataset.platform + "即将上线，可加微信 shiyi-photo 提前获取安装包");
+      showToast("加微信 shiyi-photo 获取 " + btn.dataset.platform + " 安装包");
     });
   });
 
