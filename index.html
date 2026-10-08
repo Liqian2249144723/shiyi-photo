@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>拾忆相馆 · 老照片修复 | 让褪色的记忆重新清晰</title>
+  <meta name="description" content="拾忆相馆——专业老照片修复与图像处理工作室。老照片破损修复、黑白照片上色、模糊增强、残缺重建，让珍贵的记忆重现光影。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Ma+Shan+Zheng&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2314110d'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23c99a5f' font-family='serif'%3E%E6%8B%BE%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <!-- ============ 导航（内容由 js/layout.js 注入） ============ -->
+  <header class="nav" id="nav" data-nav></header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <p class="hero-vertical" aria-hidden="true">光 · 影 · 記 · 憶 &nbsp; 自 壹 玖 捌 貳</p>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <span class="eyebrow-line"></span>
+            专业老照片修复工作室
+          </p>
+          <h1 class="hero-title">
+            <span class="reveal" style="--d:.08s">让褪色的记忆</span>
+            <span class="reveal title-accent" style="--d:.2s">重新清晰可见</span>
+          </h1>
+          <p class="hero-desc reveal" style="--d:.32s">
+            划痕、霉斑、撕裂、泛黄、模糊……岁月留下的痕迹，
+            由我们一笔一笔抹去。你只管珍藏回忆，剩下的交给光影。
+          </p>
+          <div class="hero-actions reveal" style="--d:.44s">
+            <a href="#contact" class="btn btn-primary">免费试修 · 9.9元起</a>
+            <a href="#contact" class="btn btn-outline">免费评估报价</a>
+            <a href="works.html" class="btn btn-ghost">查看修复案例<span class="arrow">→</span></a>
+          </div>
+          <dl class="hero-stats reveal" style="--d:.56s">
+            <div><dt><span class="counter" data-target="50000">0</span><span class="stat-unit">+</span></dt><dd>已成功修复</dd></div>
+            <div><dt><span class="counter" data-target="20000">0</span><span class="stat-unit">+</span></dt><dd>服务家庭</dd></div>
+            <div><dt><span class="counter" data-target="99">0</span><span class="stat-unit">%</span></dt><dd>好评率</dd></div>
+            <div><dt><span class="counter" data-target="48">0</span><span class="stat-unit">h</span></dt><dd>极速交付</dd></div>
+          </dl>
+        </div>
+
+        <!-- 修复前后对比 -->
+        <div class="hero-visual reveal" style="--d:.3s">
+          <div class="comparison" id="heroCompare">
+            <img class="cmp-img cmp-after"
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Restored%20vintage%201980s%20Chinese%20family%20portrait%20photograph%2C%20warm%20natural%20colors%2C%20three%20generations%20sitting%20in%20an%20old%20living%20room%2C%20soft%20window%20daylight%2C%20sharp%20detailed%20faces%2C%20heartwarming%20nostalgic%20atmosphere%2C%20professional%20photo%20restoration%2C%20subtle%20film%20grain&image_size=landscape_16_9"
+              alt="修复后的八十年代全家福" loading="eager" />
+            <div class="cmp-before-wrap">
+              <img class="cmp-img aged"
+                src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Restored%20vintage%201980s%20Chinese%20family%20portrait%20photograph%2C%20warm%20natural%20colors%2C%20three%20generations%20sitting%20in%20an%20old%20living%20room%2C%20soft%20window%20daylight%2C%20sharp%20detailed%20faces%2C%20heartwarming%20nostalgic%20atmosphere%2C%20professional%20photo%20restoration%2C%20subtle%20film%20grain&image_size=landscape_16_9"
+                alt="修复前破损泛黄的老照片" loading="eager" />
+              <div class="damage" aria-hidden="true"></div>
+            </div>
+            <div class="cmp-handle" aria-hidden="true">
+              <span class="cmp-line"></span>
+              <span class="cmp-knob"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M8 5 3 12l5 7M16 5l5 7-5 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+            <span class="cmp-tag tag-before">修复前</span>
+            <span class="cmp-tag tag-after">修复后</span>
+          </div>
+          <p class="hero-visual-note">← 拖动中间滑块，见证时光复原 →</p>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>向下滚动</span>
+        <span class="hero-scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ============ 功能导览 ============ -->
+    <section class="section portal-section" id="portal">
+      <div class="section-head">
+        <p class="section-index reveal">EXPLORE</p>
+        <h2 class="section-title reveal" style="--d:.1s">从这里，开始拾忆</h2>
+        <p class="section-sub reveal" style="--d:.2s">每个功能都是独立页面，清晰、专注，不被打扰。</p>
+      </div>
+
+      <div class="portal-grid">
+        <a class="portal-card reveal" href="services.html">
+          <span class="portal-no">01</span>
+          <svg class="portal-icon" viewBox="0 0 24 24"><path d="M4 7V5a1 1 0 0 1 1-1h2M20 7V5a1 1 0 0 0-1-1h-2M4 17v2a1 1 0 0 0 1 1h2M20 17v2a1 1 0 0 1-1 1h-2M4 12h16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <h3>修复服务</h3>
+          <p>六大修复项目，对应每一种岁月损伤。</p>
+          <span class="portal-go">进入 <span class="arrow">→</span></span>
+        </a>
+
+        <a class="portal-card reveal" style="--d:.07s" href="works.html">
+          <span class="portal-no">02</span>
+          <svg class="portal-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.6" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="m4 17 4.5-4 3.5 3 3-3 5 5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          <h3>修复案例</h3>
+          <p>真实作品对比，拖动滑块见证修复前后。</p>
+          <span class="portal-go">进入 <span class="arrow">→</span></span>
+        </a>
+
+        <a class="portal-card reveal" style="--d:.14s" href="process.html">
+          <span class="portal-no">03</span>
+          <svg class="portal-icon" viewBox="0 0 24 24"><path d="M4 6h11M15 6l-2.5-2.6M15 6 12.5 8.6M4 12h11M15 12l-2.5-2.6M15 12l-2.5 2.6M4 18h11M15 18l-2.5-2.6M15 18l-2.5 2.6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>修复流程</h3>
+          <p>四步线上完成，足不出户找回旧时光。</p>
+          <span class="portal-go">进入 <span class="arrow">→</span></span>
+        </a>
+
+        <a class="portal-card reveal" style="--d:.21s" href="pricing.html">
+          <span class="portal-no">04</span>
+          <svg class="portal-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 7.6c-1.7 0-2.6 1-2.6 2.2 0 2.9 5 1.5 5 4.4 0 1.2-1 2.2-2.7 2.2-1.2 0-2.3-.5-2.8-1.3M12 6v1.4m0 9.2V18" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <h3>价格</h3>
+          <p>三档透明定价，修不好不收费。</p>
+          <span class="portal-go">进入 <span class="arrow">→</span></span>
+        </a>
+
+        <a class="portal-card reveal" style="--d:.28s" href="download.html">
+          <span class="portal-no">05</span>
+          <svg class="portal-icon" viewBox="0 0 24 24"><path d="M12 4v10m0 0 3.6-3.6M12 14l-3.6-3.6M5 17h14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>应用下载</h3>
+          <p>电脑版 / 手机版，随时随地修复照片。</p>
+          <span class="portal-go">立即下载 <span class="arrow">→</span></span>
+        </a>
+
+        <a class="portal-card portal-card-featured portal-card-hot reveal" style="--d:.35s" href="services.html#dynamic">
+          <span class="portal-hot-tag">🔥 热门增值</span>
+          <span class="portal-no">06</span>
+          <svg class="portal-icon" viewBox="0 0 24 24"><path d="M8 5v14l4-2.6L16 19V5a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M10 9.5 12 11l2-1.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <h3>动态复活</h3>
+          <p>让照片里的人眨眼、微笑、微微转头——一段5秒视频，让记忆真正"动"起来。</p>
+          <span class="portal-go">了解动态复活 <span class="arrow">→</span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ 修复流程（首页精简版） ============ -->
+    <section class="section section-dim" id="home-flow">
+      <div class="section-head">
+        <p class="section-index reveal">PROCESS</p>
+        <h2 class="section-title reveal" style="--d:.1s">四步，把照片交回时光</h2>
+        <p class="section-sub reveal" style="--d:.2s">足不出户，全程线上沟通；修不好，全额退款。</p>
+      </div>
+      <ol class="home-flow-list">
+        <li class="home-flow-step reveal">
+          <span class="home-flow-no">壹</span>
+          <h3>上传照片</h3>
+          <p>微信扫码或邮箱发送，手机翻拍即可，破损模糊都不影响评估。</p>
+        </li>
+        <li class="home-flow-step reveal" style="--d:.08s">
+          <span class="home-flow-no">贰</span>
+          <h3>免费评估报价</h3>
+          <p>2小时内回复方案与价格，确认后再开始，全程无隐藏费用。</p>
+        </li>
+        <li class="home-flow-step reveal" style="--d:.16s">
+          <span class="home-flow-no">叁</span>
+          <h3>精工修复</h3>
+          <p>修图师手工逐帧处理，3–5 个工作日交付，支持两轮免费微调。</p>
+        </li>
+        <li class="home-flow-step reveal" style="--d:.24s">
+          <span class="home-flow-no">肆</span>
+          <h3>满意交付</h3>
+          <p>交付高清数字文件，可选冲印级艺术微喷与原木装裱。</p>
+        </li>
+      </ol>
+      <p class="reveal" style="margin-top:36px;text-align:center"><a href="process.html" class="btn btn-outline">查看完整流程 <span class="arrow">→</span></a></p>
+    </section>
+
+    <!-- ============ 客户评价 ============ -->
+    <section class="section" id="testimonials">
+      <div class="section-head">
+        <p class="section-index reveal">VOICES</p>
+        <h2 class="section-title reveal" style="--d:.1s">他们说，记忆回来了</h2>
+        <p class="section-sub reveal" style="--d:.2s">每一段留言背后，都是一次重逢。</p>
+      </div>
+      <div class="testimonials-grid">
+        <article class="testimonial-card reveal">
+          <p class="testimonial-quote">看到奶奶年轻时的彩色照片那一刻，我眼泪直接掉下来了。她穿着那件藏青棉袄，笑得和记忆里一模一样。</p>
+          <div class="testimonial-meta">
+            <span class="testimonial-avatar">林</span>
+            <div>
+              <p class="testimonial-name">林女士</p>
+              <p class="testimonial-loc">浙江 · 全家福 1956</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal" style="--d:.08s">
+          <p class="testimonial-quote">父亲走得早，家里只剩一张他单人黑白照。给女儿看了动态版的爸爸，她喊了声"爷爷好"。</p>
+          <div class="testimonial-meta">
+            <span class="testimonial-avatar">陈</span>
+            <div>
+              <p class="testimonial-name">陈先生</p>
+              <p class="testimonial-loc">广东 · 父亲肖像 1972</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal" style="--d:.16s">
+          <p class="testimonial-quote">老照片折痕贯穿整张脸，本以为没救了。修复后连衣领的纹理都看得清，价格也透明，没有套路。</p>
+          <div class="testimonial-meta">
+            <span class="testimonial-avatar">王</span>
+            <div>
+              <p class="testimonial-name">王阿姨</p>
+              <p class="testimonial-loc">北京 · 结婚照 1962</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 修复师 ============ -->
+    <section class="section" id="artisan">
+      <div class="section-head">
+        <p class="section-index reveal">ARTISAN</p>
+        <h2 class="section-title reveal" style="--d:.1s">每一张照片，都由他们亲手修复</h2>
+        <p class="section-sub reveal" style="--d:.2s">没有一键滤镜，没有批量算法。只有手艺、耐心，和对一张老照片的敬意。</p>
+      </div>
+      <div class="artisan-grid">
+        <article class="artisan-card reveal">
+          <div class="artisan-portrait">
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20portrait%20of%20middle-aged%20Chinese%20master%20photo%20restorer%20at%20workbench%2C%20warm%20spotlight%2C%20vintage%20workshop%2C%20focused%20expression%2C%20apron%2C%20film%20grain&image_size=portrait_4_3" alt="主理人 周师傅" loading="lazy" />
+          </div>
+          <div class="artisan-info">
+            <p class="artisan-role">主理人 · 修复总监</p>
+            <h3 class="artisan-name">周师傅 <span class="artisan-en">ZHOU</span></h3>
+            <p class="artisan-years">从业 18 年 · 修复逾 12,000 张</p>
+            <p class="artisan-bio">原新华社图片社修图师，擅长严重破损重建与黑白自然上色。相信"修图不是修瑕，是修一段光阴"。</p>
+          </div>
+        </article>
+
+        <article class="artisan-card reveal" style="--d:.1s">
+          <div class="artisan-portrait">
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Young%20Chinese%20female%20photo%20restorer%20working%20on%20laptop%2C%20soft%20studio%20light%2C%20warm%20background%2C%20concentrated%20expression%2C%20vintage%20tools%20nearby&image_size=portrait_4_3" alt="上色师 林师傅" loading="lazy" />
+          </div>
+          <div class="artisan-info">
+            <p class="artisan-role">上色师 · 面部精修</p>
+            <h3 class="artisan-name">林师傅 <span class="artisan-en">LIN</span></h3>
+            <p class="artisan-years">从业 9 年 · 专攻黑白上色</p>
+            <p class="artisan-bio">中央美院数字媒体毕业，擅长根据年代服饰、地域特征还原肤色与布料质感，让黑白照里的眼神真正活过来。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 隐私安全承诺 ============ -->
+    <section class="trust-band" id="trust">
+      <div class="trust-inner">
+        <div class="trust-item reveal">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 7.6 8 9 4.6-1.4 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <h4>签署保密协议</h4>
+          <p>正式订单均签订隐私协议，对家庭影像负责到底。</p>
+        </div>
+        <div class="trust-item reveal" style="--d:.08s">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          <h4>云端加密存储</h4>
+          <p>全程加密传输与离线存储，仅授权修图师可见。</p>
+        </div>
+        <div class="trust-item reveal" style="--d:.16s">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14M5 7v12h14V7M9 7V5a3 3 0 0 1 6 0v2M10 12l4 4M14 12l-4 4"/></svg>
+          <h4>修复后销毁</h4>
+          <p>交付确认后 30 日内自动删除原始与中间文件，可申请加急。</p>
+        </div>
+        <div class="trust-item reveal" style="--d:.24s">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0Z"/><path d="M9 12l2 2 4-4"/></svg>
+          <h4>修不好全额退款</h4>
+          <p>所有订单支持修前免费试修，确认效果后再付款。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 联系 CTA ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact-card reveal">
+        <p class="contact-stamp">拾憶</p>
+        <h2 class="contact-title">把照片交给我们，<br/>把回忆还给时光。</h2>
+        <p class="contact-sub">现在上传照片，即可获得免费修复评估与准确报价。</p>
+        <div class="contact-ways">
+          <a class="contact-way" href="weixin://dl/chat?shiyi-photo">
+            <span class="contact-way-label">微信咨询</span>
+            <span class="contact-way-value">shiyi-photo</span>
+          </a>
+          <a class="contact-way" href="mailto:hello@shiyi.art">
+            <span class="contact-way-label">邮箱</span>
+            <span class="contact-way-value">hello@shiyi.art</span>
+          </a>
+        </div>
+        <a href="mailto:hello@shiyi.art?subject=老照片修复咨询" class="btn btn-primary btn-lg">立即上传照片 · 免费评估</a>
+        <p class="contact-note">通常 2 小时内回复 · 修不好全额退款</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 页脚（内容由 js/layout.js 注入） ============ -->
+  <footer class="footer" data-footer></footer>
+
+  <!-- 全局悬浮客服（内容由 js/layout.js 注入） -->
+  <aside class="floating-widget" id="floatWidget" data-widget aria-label="在线客服"></aside>
+
+  <script src="js/layout.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
